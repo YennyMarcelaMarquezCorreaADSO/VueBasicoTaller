@@ -1,0 +1,32 @@
+body{
+background-color: rgb(227, 217, 243);
+padding: 2em;
+text-align: center;
+}
+
+input{
+    background-color: rgb(187, 160, 211);
+    border-color: rgb(143, 111, 173) ;
+    padding: 4px;
+}
+
+.bt1{
+    margin: 0rem;
+}
+button{
+    padding: .2rem;
+    background-color: rgb(153, 104, 199);
+    color: #fff;
+    border-color: blueviolet;
+    box-shadow: 3px 3px 3px  rgb(139, 139, 139);
+    margin: .5rem;
+}
+
+.num1{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.num3{
+    margin-right: 2rem;
+}

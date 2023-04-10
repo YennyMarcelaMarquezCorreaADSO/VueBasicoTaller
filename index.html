@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        
+        <form>
+            <p>{{mensaje1}}</p>
+            <input class="num1" type="text" v-model="libro" placeholder="Nombre del libro">
+            <input type="text" v-model="autor" placeholder="Autor">
+            <br>
+            <input class="num3" type="text" v-model="genero" placeholder="Género">
+            <input type="number" v-model="paginas" placeholder="Cantidad de páginas">
+            <br><br>
+            <button @click.prevent="enviar"> ENVIAR</button>
+            <button @click.prevent="agregaralfinal">Agregar al final</button>
+            <button @click.prevent="agregarInicio">Agregar al inicio</button>
+        </form>
+        
+        <br>
+        <p>Objeto:</p>
+        <div v-for="(m, index) in lista">
+            {{index}}.
+            LIBRO:{{m.libro}} - AUTOR:{{m.autor}} - 
+            GÉNERO:{{m.genero}} - PÁGINAS:{{m.paginas}}
+            <button @click.prevent="eliminarcualquiera(index)">Eliminar</button>
+        </div>
+
+        <br>
+        <p>Array:</p>
+        <div v-for="array in lista">
+            {{array}}
+        </div>
+        <br>
+        <button @click="eliminaprimero">Eliminar elemento uno</button>
+        <button @click="eliminarultimo">Eliminar ultimo elemento</button>
+        <br><br> 
+ 
+        <br><br>
+
+
+        <button @click.prevent="mapeo">Mapeo</button>
+        <ul>
+            <li v-for="(lista,index) of lista">{{index}} {{lista.lista}}
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
